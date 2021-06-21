@@ -1,0 +1,54 @@
+@import 'vars.scss';
+.text-shadow {
+    &-red{
+      color:$redColor;
+     text-shadow:
+     0px 0px 16px rgba(249, 102, 86, 0.30),
+    -3px -3px 2px #121112,
+     3px 3px 2px #37353a;
+
+    }
+
+    &-green {
+      color:$greenColor;
+      text-shadow: 
+      0px 0px 16px rgba(68, 228, 170, 0.30),
+      -3px -3px 2px #121112,
+      3px 3px 2px #37353a;
+
+    }
+}
+
+
+.app{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $mainColor;
+  width: 100vw;
+  min-height: 100vh;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  padding: 15px;
+}
+.app__inner{
+  max-width:777px;
+  min-height: 562px;
+
+  border-radius: 62px;
+  padding: 48px 30px;
+
+  background: linear-gradient(122deg, #272629 1.1%, #1C1B1E 98.65%);
+  box-shadow: -8px -8px 23px #2D2B2F,
+  8px 8px 23px #121112;
+}
+@media (max-width:550px){
+  .app {
+    padding: 0;
+
+  }
+  .app__inner{
+    padding: 10px;
+  }
+}

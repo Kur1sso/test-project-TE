@@ -1,0 +1,241 @@
+@import '../../vars.scss';
+
+//indicators
+.slide__indicators{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  & a:not(:last-child) .indicator {
+    margin-right: 15px;
+  }
+}
+.indicator{
+  width: 168px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.indicator__button{
+  width: 75px;
+  height: 75px;
+  margin-bottom: 24px;
+  border-radius: 50%;
+  
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: $mainColor;
+  box-shadow: -3px -3px 8px #2D2B2F,
+  3px 3px 8px #121112;
+
+  cursor: pointer;
+  transition: background .3s;
+  &:hover{
+    background:$darkMain;
+    @extend .text-shadow-hover;
+  }
+}
+.indicator__count{
+  
+  font-size: 48px;
+  text-align: center;
+
+  color: #F96656;
+  transition: text-shadow .3s, color .3s;
+}
+.indicator__light{
+  width: 100%;
+  height: 14px;
+  border-radius: 25px;
+  transition: text-shadow .3s,
+  background .3s,
+  box-shadow .3s;
+  
+  &-red{
+    background: #F96656;
+    box-shadow: 0px 0px 15px rgba(249, 102, 86, 0.51),
+    inset 3px 3px 4px #C83525,
+    inset -2px -2px 4px #FF8777;
+  }
+  &-green{
+    background: $greenColor;
+    box-shadow: 0px 0px 16px rgba(68, 228, 170, 0.51),
+    inset -2px -2px 3px #61FFC7,
+    inset 2px 2px 2px #1EBE84;
+  }
+  
+}
+.content{
+  padding-top: 33px;
+  margin-bottom: 85px;
+}
+.content__form{
+  margin-top: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content__title{
+  font-size: 48px;
+  text-align: center;
+}
+.content__question{
+  font-size: 48px;
+}
+.content__input{
+  font-size: 48px;
+  padding:24px;
+  max-width: 534px;
+  height: 61px;
+  background: #1F1E20;
+  box-shadow: inset -4px -5px 5px #242326,
+  inset 4px 5px 5px #161618;
+  border-radius: 25px;
+  outline: none;
+  border-color: gray;
+}
+
+.slide__footer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.result__footer {
+  display: flex;
+  justify-content: space-between;
+}
+.button-wrapper{
+  &:not(:last-child){
+    padding-right: 30px;
+    
+  }
+}
+.footer__btn {
+
+  display: block;
+  padding: 10px 22px;
+  border-radius: 24px;
+
+  background: $mainColor;
+  box-shadow: -5px -5px 8px #252327,
+    5px 5px 8px #181718, ;
+
+  cursor: pointer;
+  transition: background .3s;
+
+  &:hover {
+    @extend .text-shadow-hover;
+  }
+  a:not(:last-child) & {
+    margin-right: 15px;
+  }
+}
+.inactive-btn{
+  color:rgba($greenColor,.4);
+  transition: color .3s;
+}
+
+.footer__btn-text {
+  font-size: 48px;
+  text-align: center;
+
+  transition: text-shadow .3s,
+    color .3s;
+}
+.result__text-inner{
+  min-height: 251px;
+}
+.result__title{
+  font-size: 48px;
+  text-align: center;
+  margin:32px 0;
+}
+.result__sentences{
+  font-size: 48px;
+  text-align: center;
+  padding-bottom:15px;
+  word-wrap: break-word;
+}
+
+
+@media (max-width: 800px) {
+  .indicator__light {
+    width: 100px;
+  }
+  .content__question{
+    display: block;
+    text-align: center;
+    margin-bottom:20px;
+  }
+  .content__form{
+    flex-direction: column;
+    margin-top:20px;
+  }
+ 
+  .indicator {
+    width: 75px;
+  }
+}
+@media (max-width:720px){
+   .slide__footer {
+     flex-wrap: wrap;
+     justify-content: center;
+   }
+  .button-wrapper-random,
+  .result__footer a{
+    order: 3;
+    padding-top: 15px;
+  }
+}
+@media (max-width:620px) {
+  .slide__indicators{
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .content__input{
+    max-width:400px;
+  }
+}
+@media (max-width:520px) {
+  .slide__indicators a{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    .indicator{
+    margin-right: 0px !important;
+    }
+  }
+  .content__input {
+    width: 100%;
+  }
+  .content{
+    margin-bottom: 0px;
+  }
+  
+}
+
+@media (max-width:460px) {
+  .button-wrapper{
+    padding-right: 0px !important;
+    padding-top: 15px;
+  }
+  .indicator__button{
+    display: none;
+  }
+  .indicator__light {
+    margin-top: 15px;
+  }
+  .footer__btn {
+    a:not(:last-child) & {
+      margin-right: 0px;
+    }
+  }
+  .result__title,
+  .result__sentences{
+    font-size: 33px;
+  }
+}

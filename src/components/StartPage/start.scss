@@ -1,0 +1,50 @@
+@import '../../vars.scss';
+.start{
+  padding: 42px 10px;
+}
+.start__title{
+  font-family: Roboto,sans-serif;
+  font-weight: bold;
+  font-size: 64px;
+  text-align: center;
+
+  margin-bottom: 109px;
+}
+.start__btn{
+  
+  margin: auto;
+  display: block;
+  width: 374px;
+  padding: auto 17px;
+  border-radius: 24px;
+
+  background: $mainColor;
+  box-shadow: -5px -5px 8px #252327,
+  5px 5px 8px #181718,;
+  
+  cursor: pointer;
+  transition: background .3s;
+  &:hover{
+    background: $darkMain;
+    @extend .text-shadow-hover;
+  }
+}
+.start__btn-text{
+
+  font-size: 64px;
+  line-height: 75px;
+  text-align: center;
+
+  transition: text-shadow .3s,
+  color .3s;
+}
+
+
+@media (max-width:550px) {
+  .start__btn {
+    width: 270px;
+  }
+  .start__title{
+    font-size: 45px;
+  }
+}

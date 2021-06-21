@@ -1,0 +1,20 @@
+$mainColor: #1F1E20;
+$darkMain:#212022;
+$redColor:#F96656;
+$darkRed:#da5142;
+$darkGreen:#41d39d;
+$greenColor:#44E4AA;
+
+.text-shadow-hover{
+  .text-shadow-red {
+    text-shadow: 0px 0px 22px rgba(249, 102, 86, 0.9),
+      -3px -3px 2px #121112,
+      3px 3px 2px #37353a !important;
+  }
+
+  .text-shadow-green {
+    text-shadow: 0px 0px 22px rgba(68, 228, 170, 0.9),
+      -3px -3px 2px #121112,
+      3px 3px 2px #37353a !important;
+  }
+}
