@@ -72,7 +72,7 @@ const createSentence = (stateCopy: slideStateType) => {
     when: stateCopy.slidesArr[2].answer
   }
   parts.who = parts.who.charAt(0).toUpperCase() + parts.who.slice(1)
-  stateCopy.sentences = `${parts.who} ${parts.what} ${parts.when} ${parts.where}`;
+  stateCopy.sentences = `${parts.who} ${parts.what} ${parts.where} ${parts.when}`;
 
   return stateCopy.sentences;
 }
